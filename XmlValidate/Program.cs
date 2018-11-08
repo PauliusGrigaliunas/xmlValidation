@@ -10,7 +10,7 @@ namespace XmlValidate
         static void Main(string[] args)
         {
             XmlSchemaSet schema = new XmlSchemaSet();
-            schema.Add("https://maitinimas.lt", @"C:\Users\Paulius\Documents\GitHub\xmlValidation\XmlValidate\XMLSchema.xsd");
+            schema.Add("", @"C:\Users\Paulius\Documents\GitHub\xmlValidation\XmlValidate\XMLSchema.xsd");
 
             XDocument xmlDocument = XDocument.Load(@"C:\Users\Paulius\Documents\GitHub\xmlValidation\XmlValidate\Food.xml");
             bool validationErrors = false;
