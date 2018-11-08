@@ -744,11 +744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paulius\\source\\repos\\XmlValidate\\XmlValidate\\XmlValidate.csproj",
+      "projectUniqueName": "C:\\Users\\Paulius\\Documents\\GitHub\\xmlValidation\\XmlValidate\\XmlValidate.csproj",
       "projectName": "XmlValidate",
-      "projectPath": "C:\\Users\\Paulius\\source\\repos\\XmlValidate\\XmlValidate\\XmlValidate.csproj",
+      "projectPath": "C:\\Users\\Paulius\\Documents\\GitHub\\xmlValidation\\XmlValidate\\XmlValidate.csproj",
       "packagesPath": "C:\\Users\\Paulius\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Paulius\\source\\repos\\XmlValidate\\XmlValidate\\obj\\",
+      "outputPath": "C:\\Users\\Paulius\\Documents\\GitHub\\xmlValidation\\XmlValidate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
