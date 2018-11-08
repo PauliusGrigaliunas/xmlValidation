@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "c475d3676edf244092cb79a904c7e1d754fd3847"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "XmlValidate/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json.Schema": "3.0.10"
+        },
+        "runtime": {
+          "XmlValidate.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Newtonsoft.Json.Schema/3.0.10": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Schema.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "XmlValidate/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wrf5LBX1omJ/8HiYKby22uBV7MPCfwxXWY39w28VZJjYdN1Cb3eiTkkWk5gAkkdW+N/A0hgSmqtiPoAwsb07qg==",
+      "path": "newtonsoft.json/11.0.1",
+      "hashPath": "newtonsoft.json.11.0.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json.Schema/3.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uDNsnCTUOryhTtujD297nLj+lyxIQ4H54o4TiPBsB0w06COs03eoHRvHFAflI8LbEtsezcdooT8rAcJ8nM08ew==",
+      "path": "newtonsoft.json.schema/3.0.10",
+      "hashPath": "newtonsoft.json.schema.3.0.10.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Maistas
+  xmlns="https://puslapis.lt">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://maitinimas.lt XMLSchema.xsd">
+  <Maitinimo_istaigos>
+    <Valgykla kodas = "03228">
+      <Pavadinimas>Montuotojas</Pavadinimas>
+      <Patiekalai>
+        <Patiekalas>
+          <Pavadinimas>Kepsnys su sūriu</Pavadinimas>
+          <Kategorija>Kepsnys</Kategorija>
+          <Kaina>3.20</Kaina>
+          <Ingredientai>
+            <Ingredientas kodas = "m1"/>
+          </Ingredientai>
+        </Patiekalas>
+        <Patiekalas>
+          <Pavadinimas>Kiaulienos Kepsnys</Pavadinimas>
+          <Kategorija>Kepsnys</Kategorija>
+          <Kaina>3.00</Kaina>
+          <Ingredientai>
+
+          </Ingredientai>
+        </Patiekalas>
+        <Patiekalas>
+          <Pavadinimas>Charčio</Pavadinimas>
+          <Kategorija>Sriuba</Kategorija>
+          <Kaina>1.00</Kaina>
+          <Ingredientai>
+            <Ingredientas kodas = "m2"/>
+            <Ingredientas kodas = "d2"/>
+          </Ingredientai>
+        </Patiekalas>
+      </Patiekalai>
+      <Filialai>
+        <Filialas pasto_kodas ="03228">
+          <Šalis>Lietuva</Šalis>
+          <Miestas>Vilnius</Miestas>
+          <Gatvė>
+            Naugarduko<Numeris>34</Numeris>
+          </Gatvė>
+          <Telefonas>+37061222346</Telefonas>
+        </Filialas>
+      </Filialai>
+    </Valgykla>
+
+
+    <Kebabinė kodas = "a1304">
+      <Pavadinimas>Jammi</Pavadinimas>
+      <Patiekalai>
+        <Patiekalas>
+          <Pavadinimas>Jautienos kebabas</Pavadinimas>
+          <Kategorija>Kebabas</Kategorija>
+          <Kaina>3.10</Kaina>
+          <Ingredientai>
+            <Ingredientas kodas = "m1"/>
+          </Ingredientai>
+        </Patiekalas>
+      </Patiekalai>
+      <Filialai>
+
+        <Filialas pasto_kodas ="4">
+          <Šalis>Lietuva</Šalis>
+          <Miestas>Vilnius</Miestas>
+          <Gatvė>
+            Ateities<Numeris>10</Numeris>
+          </Gatvė>
+          <Telefonas>869977597</Telefonas>
+        </Filialas>
+
+        <Filialas pasto_kodas ="03248">
+          <Šalis>Lietuva</Šalis>
+          <Miestas>Vilnius</Miestas>
+          <Gatvė>
+            Tauro<Numeris>3</Numeris>
+          </Gatvė>
+          <Telefonas>+37052505668</Telefonas>
+        </Filialas>
+
+      </Filialai>
+
+    </Kebabinė>
+    <Kebabinė kodas = "a1322">
+      <Pavadinimas>Sinano Kebabai</Pavadinimas>
+      <Patiekalai>
+        <Patiekalas>
+          <Pavadinimas>Jautienos kebabas</Pavadinimas>
+          <Kategorija>Kebabas</Kategorija>
+          <Kaina>3.00</Kaina>
+          <Ingredientai>
+            <Ingredientas kodas = "m1"/>
+          </Ingredientai>
+        </Patiekalas>
+      </Patiekalai>
+      <Filialai>
+        <Filialas pasto_kodas ="03910">
+          <Šalis>Lietuva</Šalis>
+          <Miestas>Vilnius</Miestas>
+          <Gatvė>
+            Trimitų<Numeris>24</Numeris>
+          </Gatvė>
+          <Telefonas>+37065462717</Telefonas>
+        </Filialas>
+      </Filialai>
+    </Kebabinė>
+
+    <Picerija kodas = "a1344">
+      <Pavadinimas>Double pizza</Pavadinimas>
+      <Patiekalai>
+        <Patiekalas>
+          <Pavadinimas>Double Special</Pavadinimas>
+          <Kategorija>Pica</Kategorija>
+          <Kaina>5.00</Kaina>
+          <Ingredientai>
+
+            <Ingredientas kodas = "d1"/>
+            <Ingredientas kodas = "mm12"/>
+          </Ingredientai>
+        </Patiekalas>
+      </Patiekalai>
+      <Filialai>
+        <Filialas pasto_kodas ="10005">
+          <Šalis>Lietuva</Šalis>
+          <Miestas>Vilnius</Miestas>
+          <Gatvė>
+            Verkių<Numeris>36</Numeris>
+          </Gatvė>
+          <Telefonas>864878886</Telefonas>
+        </Filialas>
+      </Filialai>
+    </Picerija>
+  </Maitinimo_istaigos>
+
+
+  <Maisto_sandėlys>
+    <Produktas kodas = "m1" >Jautiena</Produktas>
+    <Produktas kodas = "m2" >Kiauliena</Produktas>
+    <Grupė_produktų kodas = "mm12" >1:Jautiena 2:Kiauliena</Grupė_produktų>
+    <Produktas kodas = "d1" >Agurkas</Produktas>
+    <Produktas kodas = "d2" >Pomidoras</Produktas>
+    <Produktas kodas = "d3" >Svogunas</Produktas>
+    <Grupė_produktų kodas = "dd33" >1:Svogunas 2:RaudoniejiSvogunai</Grupė_produktų>
+  </Maisto_sandėlys>
+
+
+</Maistas>

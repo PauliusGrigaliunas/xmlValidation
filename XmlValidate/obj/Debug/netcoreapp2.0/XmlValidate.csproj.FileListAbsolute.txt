@@ -1,0 +1,11 @@
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\bin\Debug\netcoreapp2.0\XmlValidate.deps.json
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\bin\Debug\netcoreapp2.0\XmlValidate.runtimeconfig.json
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\bin\Debug\netcoreapp2.0\XmlValidate.runtimeconfig.dev.json
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\bin\Debug\netcoreapp2.0\XmlValidate.dll
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\bin\Debug\netcoreapp2.0\XmlValidate.pdb
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\obj\Debug\netcoreapp2.0\XmlValidate.csprojAssemblyReference.cache
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\obj\Debug\netcoreapp2.0\XmlValidate.csproj.CoreCompileInputs.cache
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\obj\Debug\netcoreapp2.0\XmlValidate.AssemblyInfoInputs.cache
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\obj\Debug\netcoreapp2.0\XmlValidate.AssemblyInfo.cs
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\obj\Debug\netcoreapp2.0\XmlValidate.dll
+C:\Users\Paulius\source\repos\XmlValidate\XmlValidate\obj\Debug\netcoreapp2.0\XmlValidate.pdb

@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="https://maitinimas.lt"
+    xmlns:mano="https://maitinimas.lt"
+elementFormDefault="unqualified">
+
+
+  <xsd:element name="Maistas" type="mano:MaistasTipas">
+    <xsd:key name="Produktai">
+      <xsd:selector xpath="Maisto_sandėlys/child::*"/>
+      <xsd:field xpath="@kodas"/>
+    </xsd:key>
+    <xsd:keyref name="Ingredientas" refer="mano:Produktai">
+      <xsd:selector xpath="Maitinimo_istaigos/child::*/Patiekalai/Patiekalas/Ingredientai/Ingredientas"/>
+      <xsd:field xpath="@kodas"/>
+    </xsd:keyref>
+  </xsd:element>
+
+  <xsd:complexType name ="MaistasTipas">
+    <xsd:sequence>
+      <xsd:element name="Maitinimo_istaigos" type = "mano:Maitinimo_istaiga">
+        <xsd:unique name="Maitinimo_istaigos">
+          <xsd:selector xpath="child::*"/>
+          <xsd:field xpath="@kodas"/>
+        </xsd:unique>
+        <xsd:unique name="pasto_kodas">
+          <xsd:selector xpath="child::*/Filialai/Filialas"/>
+          <xsd:field xpath="@pasto_kodas"/>
+        </xsd:unique>
+      </xsd:element>
+      <xsd:element name="Maisto_sandėlys"  maxOccurs="1" type = "mano:Sandėlys"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name ="Maitinimo_istaiga">
+    <xsd:sequence>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="Maitinimo_istaiga"  type="mano:Konkreti_Maitinimo_istaiga"/>
+        <xsd:element name="Valgykla"  type="mano:Konkreti_Maitinimo_istaiga"/>
+        <xsd:element name="Kebabinė"  type="mano:Konkreti_Maitinimo_istaiga"/>
+        <xsd:element name="Picerija"  type="mano:Konkreti_Maitinimo_istaiga"/>
+        <xsd:element name="Sušinė"  type="mano:Konkreti_Maitinimo_istaiga" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name ="Konkreti_Maitinimo_istaiga">
+    <xsd:sequence>
+      <xsd:element name="Pavadinimas" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Patiekalai" minOccurs="0" maxOccurs="1" type = "mano:Patiekalas"/>
+      <xsd:element name="Filialai" minOccurs="0" maxOccurs="1" type = "mano:Filialai"/>
+    </xsd:sequence>
+    <xsd:attribute name= "kodas" type="xsd:string" use="required" />
+  </xsd:complexType>
+
+
+  <xsd:complexType name ="Patiekalas">
+    <xsd:sequence>
+      <xsd:element name="Patiekalas" minOccurs="1" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Pavadinimas" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Kategorija" minOccurs="0" maxOccurs="1" type = "mano:Kategorijos_pasirinkimai"/>
+            <xsd:element name="Kaina" maxOccurs="1">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:decimal"/>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="Ingredientai" minOccurs="0" maxOccurs="1" type="mano:Ingredientas"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="Kategorijos_pasirinkimai">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Sriuba" />
+      <xsd:enumeration value="Kepsnys" />
+      <xsd:enumeration value="Desertas" />
+      <xsd:enumeration value="Užkandis" />
+      <xsd:enumeration value="Kebabas" />
+      <xsd:enumeration value="Sumuštinis" />
+      <xsd:enumeration value="Pica" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name ="Ingredientas">
+    <xsd:sequence>
+      <xsd:element name="Ingredientas" minOccurs="0" maxOccurs="unbounded" type="mano:Ingregientas_su_atributu"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Ingregientas_su_atributu">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name= "kodas" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="Sandėlys">
+    <xsd:sequence>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="Produktas"  type="mano:produktas_su_atributu_apribojimu"/>
+        <xsd:element name="Grupė_produktų" type="mano:Grupė_produktų"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="produktas_su_atributu_apribojimu">
+    <xsd:simpleContent>
+      <xsd:restriction base="mano:Produktas_su_atributu">
+        <xsd:pattern value="^\d*[:]?[A-Za-z]+$"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="Produktas_su_atributu">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name= "kodas" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="Grupė_produktų">
+    <xsd:simpleContent>
+      <xsd:extension base="mano:Grupė">
+        <xsd:attribute name= "kodas" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+
+
+  <xsd:simpleType name="Grupė">
+    <xsd:list itemType="mano:Santykis" />
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Santykis">
+    <xsd:restriction base="xsd:token">
+      <xsd:pattern value="^\d*[:]?[A-Za-z]+$"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="Filialai">
+    <xsd:sequence>
+      <xsd:element name="Filialas" maxOccurs="unbounded" type="mano:Filialas">
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Filialas">
+    <xsd:complexContent>
+      <xsd:restriction base="mano:Kontaktai" >
+        <xsd:sequence>
+          <xsd:element name="Šalis" type="xsd:string"/>
+          <xsd:element name="Miestas" type="xsd:string"/>
+          <xsd:element name="Gatvė" type ="mano:Gatvė"/>
+          <xsd:element name="Telefonas" type="mano:TelNr"/>
+        </xsd:sequence>
+        <xsd:attribute name= "pasto_kodas" type="xsd:string" />
+      </xsd:restriction>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="Kontaktai">
+    <xsd:complexContent>
+      <xsd:extension base="mano:Adresas">
+        <xsd:sequence>
+          <xsd:element name="Telefonas"/>
+        </xsd:sequence>
+        <xsd:attribute name= "pasto_kodas" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:simpleType name="TelNr">
+    <xsd:restriction base="xsd:token">
+      <xsd:pattern value="^\+?\d+$"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="Adresas" >
+    <xsd:sequence>
+      <xsd:element name="Šalis"/>
+      <xsd:element name="Miestas"/>
+      <xsd:element name="Gatvė" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Gatvė" mixed ="true">
+    <xsd:sequence>
+      <xsd:element name="Numeris" type ="xsd:integer"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>
