@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Maistas
-  xmlns="https://puslapis.lt">
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://maitinimas.lt XMLSchema.xsd">
+<Maistas>
   <Maitinimo_istaigos>
     <Valgykla kodas = "03228">
       <Pavadinimas>Montuotojas</Pavadinimas>
@@ -114,7 +111,7 @@
           <Kaina>5.00</Kaina>
           <Ingredientai>
 
-            <Ingredientas kodas = "d1"/>
+            <Ingredientas kodas = "1004"/>
             <Ingredientas kodas = "mm12"/>
           </Ingredientai>
         </Patiekalas>
