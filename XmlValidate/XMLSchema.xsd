@@ -2,7 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="https://maitinimas.lt"
     xmlns:mano="https://maitinimas.lt"
-elementFormDefault="unqualified">
+elementFormDefault="qualified">
 
 
   <xsd:element name="Maistas" type="mano:MaistasTipas">
@@ -180,8 +180,8 @@ elementFormDefault="unqualified">
   </xsd:complexType>
 
   <xsd:simpleType name="TelNr">
-    <xsd:restriction base="xsd:token">
-      <xsd:pattern value="^\+?\d+$"/>
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="^\d+$"/>
     </xsd:restriction>
   </xsd:simpleType>
 
