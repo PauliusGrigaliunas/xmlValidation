@@ -111,7 +111,7 @@ elementFormDefault="qualified">
   <xsd:complexType name="produktas_su_atributu_apribojimu">
     <xsd:simpleContent>
       <xsd:restriction base="mano:Produktas_su_atributu">
-        <xsd:pattern value="^\d*[:]?[A-Za-z]+$"/>
+        <xsd:pattern value="\d*[:]?[A-Za-z]+"/>
       </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -142,7 +142,7 @@ elementFormDefault="qualified">
 
   <xsd:simpleType name="Santykis">
     <xsd:restriction base="xsd:token">
-      <xsd:pattern value="^\d*[:]?[A-Za-z]+$"/>
+      <xsd:pattern value="\d*[:]?[A-Za-z]+"/>
     </xsd:restriction>
   </xsd:simpleType>
 
@@ -180,8 +180,8 @@ elementFormDefault="qualified">
   </xsd:complexType>
 
   <xsd:simpleType name="TelNr">
-    <xsd:restriction base="xsd:string">
-      <xsd:pattern value="^\d+$"/>
+    <xsd:restriction base="xsd:token">
+      <xsd:pattern value="\+?\d+"/>
     </xsd:restriction>
   </xsd:simpleType>
 

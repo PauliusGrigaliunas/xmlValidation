@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Maistas
+﻿<Maistas
   xmlns="https://maitinimas.lt"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="https://maitinimas.lt XMLSchema.xsd">
@@ -66,7 +65,7 @@
           <Gatvė>
             Ateities<Numeris>10</Numeris>
           </Gatvė>
-          <Telefonas>869977597</Telefonas>
+          <Telefonas>+37069977597</Telefonas>
         </Filialas>
 
         <Filialas pasto_kodas ="03248">
@@ -126,7 +125,7 @@
           <Gatvė>
             Verkių<Numeris>36</Numeris>
           </Gatvė>
-          <Telefonas>864878886</Telefonas>
+          <Telefonas>8064878886</Telefonas>
         </Filialas>
       </Filialai>
     </Picerija>
