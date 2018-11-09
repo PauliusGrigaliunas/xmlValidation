@@ -2,7 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="https://maitinimas.lt"
     xmlns:mano="https://maitinimas.lt"
-elementFormDefault="unqualified">
+elementFormDefault="qualified">
 
 
   <xsd:element name="Maistas" type="mano:MaistasTipas">
@@ -111,7 +111,7 @@ elementFormDefault="unqualified">
   <xsd:complexType name="produktas_su_atributu_apribojimu">
     <xsd:simpleContent>
       <xsd:restriction base="mano:Produktas_su_atributu">
-        <xsd:pattern value="^\d*[:]?[A-Za-z]+$"/>
+        <xsd:pattern value="\d*[:]?[A-Za-z]+"/>
       </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -142,7 +142,7 @@ elementFormDefault="unqualified">
 
   <xsd:simpleType name="Santykis">
     <xsd:restriction base="xsd:token">
-      <xsd:pattern value="^\d*[:]?[A-Za-z]+$"/>
+      <xsd:pattern value="\d*[:]?[A-Za-z]+"/>
     </xsd:restriction>
   </xsd:simpleType>
 
@@ -181,7 +181,7 @@ elementFormDefault="unqualified">
 
   <xsd:simpleType name="TelNr">
     <xsd:restriction base="xsd:token">
-      <xsd:pattern value="^\+?\d+$"/>
+      <xsd:pattern value="\+?\d+"/>
     </xsd:restriction>
   </xsd:simpleType>
 
